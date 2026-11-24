@@ -28,3 +28,22 @@ The public landing page is deployed. Supabase has not yet been configured, so au
 7. **Outcome:** Deployment is confirmed for the public landing page. No real-user outcome or engagement data has been collected, and the core journey has not been verified against a configured production database.
 
 **What remains for a complete live journey:** create a Supabase project, apply `supabase/schema.sql`, configure the Vercel `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` environment variables, configure the authentication redirect URL, redeploy, and verify the flows with separate test accounts. Until then, sign-in and shared event, group, and game data are unavailable on the deployed site.
+
+## Engineering checks
+
+- GitHub Actions runs `npm ci`, `npm run lint`, and `npm run build` on pushes to `main` and pull requests targeting `main`.
+- These checks cover static quality and production compilation. They do not prove Supabase behavior or replace end-to-end testing with separate user accounts.
+
+## User validation plan
+
+Run a short, consent-based session with 5–8 college students who have not used ApnaSa. Pair participants into host and attendee roles and ask them to complete the journey without coaching: create a profile, enter a shared event, find someone by common interests, join a group, use a conversation starter or game, then leave or report/block where appropriate. Do not collect unnecessary personal information.
+
+Record outcomes only after sessions are conducted:
+
+- Completion rate for event entry and first group interaction.
+- Time from opening the app to joining an event and group.
+- A 1–5 comfort rating before and after the first interaction.
+- Where participants hesitate, abandon, or misunderstand the interface.
+- Any privacy or safety concern, reported without identifying details.
+
+The current evidence pack contains no participant results. Add dated, anonymized findings and resulting product changes after research; do not present planned measures as observed outcomes.
